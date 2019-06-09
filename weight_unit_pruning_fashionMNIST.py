@@ -177,8 +177,6 @@ def unt_prune(weight,k):
       weight[x[0]][0][x[1]][y]=0
   for i in range(6):
     model.layers[i].set_weights(weight[i])
-    #print('yo')
-  #model.fit(train_images,train_labels,epochs=6)
   test_loss,test_acc=model.evaluate(test_images,test_labels)       
   return(len(prune_nrns)/len(norm_mat),test_acc)
   
